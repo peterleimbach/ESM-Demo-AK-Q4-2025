@@ -8,6 +8,12 @@ sequenceDiagram
 
     Client ->> Server: POST Login
     Server -->> Client: Session ID
-    Client ->> Server: Activate Overview
-    Server -->> Client: Tralala
+    Client ->> Server: POST Activate - Overview
+    Server -->> Client: Activate - Overview
+    Client ->> Server: POST Activate - On Hold
+    Server -->> Client: Activate - - On Hold
+    Client ->> Server: Activate - Release
+    Server -->> Client: PUT Activate - Release
+    Client ->> Server: DELETE - Logoff
+    Server -->> Client: Message "Logoff"
 ```
