@@ -6,8 +6,8 @@ sequenceDiagram
     participant Client
     participant Server
 
-    Client -> Server: POST Login
-    Server --> Client: Session ID
-    Client -> Server: Activate Overview
-    Server --> Client: Tralala
+    Client ->> Server: POST Login
+    Server -->> Client: Session ID
+    Client ->> Server: Activate Overview
+    Server -->> Client: Tralala
 ```
