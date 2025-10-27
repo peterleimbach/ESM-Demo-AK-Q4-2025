@@ -12,8 +12,8 @@ sequenceDiagram
     Server -->> Client: Activate - Overview
     Client ->> Server: POST Activate - On Hold
     Server -->> Client: Activate - - On Hold
-    Client ->> Server: Activate - Release
-    Server -->> Client: PUT Activate - Release
+    Client ->> Server: PUT Activate - Release
+    Server -->> Client: Activate - Release
     Client ->> Server: DELETE - Logoff
     Server -->> Client: Message "Logoff"
 ```
