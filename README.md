@@ -6,14 +6,14 @@ sequenceDiagram
     participant Client
     participant Server
 
-    Client ->> Server: POST Login
+    Client ->> Server: POST Logon
     Server -->> Client: Session ID
-    Client ->> Server: POST Activate - Overview
+    Client ->> Server: GET Activate Network Master - Overview
     Server -->> Client: Activate - Overview
-    Client ->> Server: POST Activate - On Hold
-    Server -->> Client: Activate - - On Hold
-    Client ->> Server: PUT Activate - Release
-    Server -->> Client: Activate - Release
+    Client ->> Server: POST Activate Network Master - Start Activation to 'hold'
+    Server -->> Client: Activate - On Hold
+    Client ->> Server: GET Release Active Run
+    Server -->> Client: Release - Run
     Client ->> Server: DELETE - Logoff
     Server -->> Client: Message "Logoff"
 ```
